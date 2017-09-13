@@ -136,6 +136,7 @@ class Gnocchi(object):
         index of the value, and don't use slash.
 
         """
+        collectd.error("META::::: %s" % dir(v))
         return (v.plugin + ("-" + v.plugin_instance
                             if v.plugin_instance else "")
                 + "@"
